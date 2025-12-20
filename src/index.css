@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer components {
+  .form-container {
+    @apply border rounded-2xl border-blue-950 p-10 flex flex-col items-center gap-5 shadow-2xl bg-white max-w-md w-full mx-auto;
+  }
+
+  .form-header {
+    @apply text-2xl font-bold text-blue-950 mb-5 text-center;
+  }
+
+  .form-group {
+    @apply flex flex-col gap-3 w-full;
+  }
+
+  .form-input {
+    @apply border border-blue-950 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-950/20 transition-all;
+  }
+
+  .btn-primary {
+    @apply bg-blue-950 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors shadow-lg hover:shadow-xl w-full flex justify-center items-center cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-blue-950 border border-blue-950 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 transition-colors shadow-sm w-full flex justify-center items-center cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors w-full flex justify-center items-center cursor-pointer;
+  }
+}
+
+@layer base {
+  a {
+    @apply font-medium text-blue-600 hover:text-blue-500 no-underline;
+  }
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* 💙 Kigali Professional Blue Palette */
+  --kigali-blue-50: #eff6ff;
+  --kigali-blue-100: #dbeafe;
+  --kigali-blue-500: #1e3a8a;
+  /* Kigali Professional Blue */
+  --kigali-blue-600: #1d4ed8;
+  --kigali-blue-700: #1e40af;
+  --kigali-blue-900: #1e3a8a;
+  --kigali-blue-950: #0f172a;
+  /* Deep Navy for Sidebar */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--kigali-blue-50);
+  color: #0f172a;
+}
+
+/* Ensure our Tailwind buttons override any specific component styles if needed */
+button {
+  cursor: pointer;
+}
